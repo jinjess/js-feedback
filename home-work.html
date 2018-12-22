@@ -4,13 +4,14 @@
 	<meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, user-scalable=no,  initial-scale=1.0, maximum-scale=1.0">
 	<title>Home Work</title>
-    <link rel="stylesheet" href="assets/reset.css">
-    <link rel="stylesheet" href="assets/style.css">
+    <!-- <link rel="stylesheet" href="assets/reset.css"> -->
+    <!-- <link rel="stylesheet" href="assets/style.css"> -->
+    <link rel="stylesheet" href="assets/index.css">
 </head>
 <body>
 	<div class="wrap">
 		<ul class="subject">
-			<li><a href="#subject01">가변 레이아웃</a></li>
+			<li><a href="#subject01">Layout Variation by do not touch DOM tree</a></li>
 			<li><a href="#subject02">입력값의 유효성 검사</a></li>
 			<li><a href="#subject03">form submit</a></li>
 			<li><a href="#subject04">사용자 함수 생성 및 사용</a></li>
@@ -19,52 +20,61 @@
 			<li><a href="#subject07">유사 디자인의 여백 표준화</a></li>
 			<li><a href="#subject08">css 모듈</a></li>
 			<li><a href="#subject09">문서와 다른 화면의 대체 기법들</a></li>
-		</ul>
-		<section class="achievement">
-			<h1>수행 과제</h1>
+		</ul><!--
+		--><section class="achievement">
+			<h1>Be Done! Your Subject</h1>
 			<article class="subject-wrap subject01">
 				<div class="be-done-inner">
-					<h2>가변 레이아웃 [<a href="/achievement/layout-variation.hrml">link</a>]</h2>
-					<div class="first-layout">
-						<div class="item01">1</div>
-						<div class="item02">2</div>
-						<div class="item03">3</div>
-						<div class="bottom">
-							<div class="item04">4</div>
-							<div class="item05">5</div>
-						</div>
+				<h2>
+					Layout Variation by do not touch DOM tree 
+					<a href="/achievement/layout-variation.hrml">[ Link ]</a>
+					<span class="day_to_submit">12.23, 2018</span>
+				</h2>
+					<pre>
+						<code>
+&lt;div class="first-layout"&gt;
+	&lt;div class="item01"&gt;1&lt;/div&gt;
+	&lt;div class="item02"&gt;2&lt;/div&gt;
+	&lt;div class="item03"&gt;3&lt;/div&gt;
+	&lt;div class="bottom"&gt;
+		&lt;div class="item04"&gt;4&lt;/div&gt;
+		&lt;div class="item05"&gt;5&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="second-layout"&gt;
+	&lt;div class="item01"&gt;1&lt;/div&gt;
+	&lt;div class="left-top"&gt;
+		&lt;div class="item02"&gt;2&lt;/div&gt;
+		&lt;div class="item03"&gt;3&lt;/div&gt;
+	&lt;/div&gt;
+	&lt;div class="left-bottom"&gt;
+		&lt;div class="item04"&gt;4&lt;/div&gt;
+		&lt;div class="item05"&gt;5&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="third-layout"&gt;
+	&lt;div class="item01"&gt;1&lt;/div&gt;
+	&lt;div class="left-top"&gt;
+		&lt;div class="item02"&gt;2&lt;/div&gt;
+		&lt;div class="item03"&gt;3&lt;/div&gt;
+	&lt;/div&gt;
+	&lt;div class="left-bottom"&gt;
+		&lt;div class="item04"&gt;4&lt;/div&gt;
+		&lt;div class="item05"&gt;5&lt;/div&gt;
+	&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/div&gt;</code>
+					</pre>
+					<div class="feedback">
+						<p>
+							1. first-, second-, third-를 하나의 마크업으로 사용하라는 문제입니다. <br />
+							   div.layout>div.item*5를 사용하든, div.layout>div-right+div.left-top+div.left-bottom을 사용하든,<br />
+							   단일 dom tree로 모든 variation을 맞추는 게 요구조건입니다.<br />
+							2. 상자간의 여백이 24px.<br />
+							3. component가 시작되는 위치는 be-done-inner 안에서부터 입니다.<br />
+							4. reset.css는 사용하지 않습니다. 과제당 하나의 css를 사용하세요.<br />
+						</p>
 					</div>
-					<div class="second-layout">
-						<div class="item01">1</div>
-						<div class="left-top">
-							<div class="item02">2</div>
-							<div class="item03">3</div>
-						</div>
-						<div class="left-bottom">
-							<div class="item04">4</div>
-							<div class="item05">5</div>
-						</div>
-					</div>
-					<div class="third-layout">
-						<div class="item01">1</div>
-						<div class="left-top">
-							<div class="item02">2</div>
-							<div class="item03">3</div>
-						</div>
-						<div class="left-bottom">
-							<div class="item04">4</div>
-							<div class="item05">5</div>
-						</div>
-					</div>
-				</div>
-				<!--
-				1. first-, second-, third-를 하나의 마크업으로 사용하라는 문제입니다. 
-				   div.layout>div.item*5를 사용하든, div.layout>div-right+div.left-top+div.left-bottom을 사용하든,
-				   단일 dom tree로 모든 variation을 맞추는 게 요구조건입니다.
-				2. 상자간의 여백이 24px.
-				3. component가 시작되는 위치는 be-done-inner 안에서부터 입니다. article의 style은 제거하겠습니다.
-				4. reset.css는 사용하지 않습니다. 과제당 하나의 css를 사용하세요.
-				-->
 			</article>
 			<article class="subject-wrap subject02">
 				<div class="be-done-inner"></div>
