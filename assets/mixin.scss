@@ -1,1 +1,9 @@
 @charset "utf-8";
+//media queary breaking point
+@mixin breakPoint($point:null, $minpoint:0px) {
+    @media all and ( min-width: #{$minpoint} ) and ( max-width: #{$point} ) {
+        @content;
+    }
+}
+$tabletPoint:1024px;
+$mobilePoint:640px;
