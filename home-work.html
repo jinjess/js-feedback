@@ -24,39 +24,46 @@
 			<h1>수행 과제</h1>
 			<article class="subject-wrap subject01">
 				<div class="be-done-inner">
-				<h2>가변 레이아웃 [<a href="/achievement/layout-variation.hrml">link</a>]</h2>
+					<h2>가변 레이아웃 [<a href="/achievement/layout-variation.hrml">link</a>]</h2>
 					<div class="first-layout">
-                        <div class="item01">1</div>
-                        <div class="item02">2</div>
-                        <div class="item03">3</div>
-                        <div class="bottom">
-                            <div class="item04">4</div>
-                            <div class="item05">5</div>
-                        </div>
+						<div class="item01">1</div>
+						<div class="item02">2</div>
+						<div class="item03">3</div>
+						<div class="bottom">
+							<div class="item04">4</div>
+							<div class="item05">5</div>
+						</div>
 					</div>
-                    <div class="second-layout">
-                        <div class="item01">1</div>
-                        <div class="left-top">
+					<div class="second-layout">
+						<div class="item01">1</div>
+						<div class="left-top">
 							<div class="item02">2</div>
 							<div class="item03">3</div>
 						</div>
-                        <div class="left-bottom">
-                            <div class="item04">4</div>
-                            <div class="item05">5</div>
-                        </div>
-                    </div>
-                    <div class="third-layout">
-                        <div class="item01">1</div>
-                        <div class="left-top">
-                            <div class="item02">2</div>
-                            <div class="item03">3</div>
-                        </div>
-                        <div class="left-bottom">
-                            <div class="item04">4</div>
-                            <div class="item05">5</div>
-                        </div>
-                    </div>
+						<div class="left-bottom">
+							<div class="item04">4</div>
+							<div class="item05">5</div>
+						</div>
+					</div>
+					<div class="third-layout">
+						<div class="item01">1</div>
+						<div class="left-top">
+							<div class="item02">2</div>
+							<div class="item03">3</div>
+						</div>
+						<div class="left-bottom">
+							<div class="item04">4</div>
+							<div class="item05">5</div>
+						</div>
+					</div>
 				</div>
+				<!--
+				1. first-, second-, third-를 하나의 마크업으로 사용하라는 문제입니다. 
+				   div.layout>div.item*5를 사용하든, div.layout>div-right+div.left-top+div.left-bottom을 사용하든,
+				   단일 dom tree로 모든 variation을 맞추는 게 요구조건입니다.
+				2. 상자간의 여백이 24px.
+				3. component가 시작되는 위치는 be-done-inner 안에서부터 입니다. article의 style은 제거하겠습니다.
+				-->
 			</article>
 			<article class="subject-wrap subject02">
 				<div class="be-done-inner"></div>
