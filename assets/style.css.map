@@ -1,7 +1,7 @@
 {
 "version": 3,
-"mappings": "AACQ,sBAAW",
-"sources": ["style.scss"],
+"mappings": "AAGA,cAAc;EACV,SAAS,EAAC,MAAM;EAChB,MAAM,EAAC,MAAM;ECFb,uDAAwE;IDA5E,cAAc;MAIN,KAAK,EAAC,IAAI;MACV,OAAO,EAAC,MAAM;ECLlB,uDAAwE;IDA5E,cAAc;MAQN,OAAO,EAAC,MAAM;ECRlB,sDAAwE;IDA5E,cAAc;MAWN,OAAO,EAAC,MAAM",
+"sources": ["style.scss","mixin.scss"],
 "names": [],
 "file": "style.css"
 }
