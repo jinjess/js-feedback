@@ -1,15 +1,145 @@
-.be-done-inner {
+/* reset */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1;
+  letter-spacing: -0.025em;
+  -webkit-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  color: #333; }
+
+ol, ul {
+  list-style: none; }
+
+a, li {
+  text-decoration: none;
+  list-style-type: none; }
+
+a {
+  color: #000; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+.clearfix:after {
+  content: '';
+  display: block;
+  clear: both;
+  height: 0;
+  visibility: hidden; }
+
+.fr div {
+  float: right; }
+
+.fl div {
+  float: left; }
+
+.subject-wrap {
   max-width: 1200px;
   margin: 0 auto; }
   @media all and (min-width: 0px) and (max-width: 1200px) {
-    .be-done-inner {
+    .subject-wrap {
       width: 100%;
       padding: 0 50px; } }
   @media all and (min-width: 0px) and (max-width: 1024px) {
-    .be-done-inner {
+    .subject-wrap {
       padding: 0 24px; } }
   @media all and (min-width: 0px) and (max-width: 640px) {
-    .be-done-inner {
+    .subject-wrap {
       padding: 0 12px; } }
+
+.be-done-inner {
+  width: 100%;
+  height: 500px;
+  margin-bottom: 50px; }
+  .be-done-inner > div:first-child {
+    width: calc(30% - 24px);
+    height: 100%;
+    margin: 0 12px; }
+  .be-done-inner > div:nth-child(2) {
+    width: calc(40% - 24px);
+    height: calc(50% - 12px);
+    margin: 0 12px 24px 12px; }
+  .be-done-inner > div:nth-child(3) {
+    width: calc(30% - 24px);
+    height: calc(50% - 12px);
+    margin: 0 12px 24px 12px; }
+  .be-done-inner > div:nth-child(4) {
+    width: calc(30% - 24px);
+    height: calc(50% - 12px);
+    margin: 0 12px; }
+  .be-done-inner > div:last-child {
+    width: calc(40% - 24px);
+    height: calc(50% - 12px);
+    margin: 0 12px; }
+  @media all and (min-width: 0px) and (max-width: 1024px) {
+    .be-done-inner > div:first-child {
+      width: calc(70% - 24px);
+      height: 100%;
+      margin: 0 12px; }
+    .be-done-inner > div:nth-child(2) {
+      width: calc(30% - 24px);
+      height: calc(50% - 12px);
+      margin: 0 12px 24px 12px; }
+    .be-done-inner > div:nth-child(3) {
+      width: calc(30% - 24px);
+      height: calc(50% - 12px);
+      margin: 0 12px 24px 12px; }
+    .be-done-inner > div:nth-child(4) {
+      width: calc(50% - 24px);
+      height: calc(50% - 12px);
+      margin: 0 12px; }
+    .be-done-inner > div:last-child {
+      width: calc(50% - 24px);
+      height: calc(50% - 12px);
+      margin: 0 12px; } }
+  @media all and (min-width: 0px) and (max-width: 640px) {
+    .be-done-inner > div:first-child {
+      width: calc(100% - 24px);
+      height: calc(20% - 24px);
+      margin: 0 12px 24px 12px; }
+    .be-done-inner > div:nth-child(2) {
+      width: calc(100% - 24px);
+      height: calc(20% - 24px);
+      margin: 0 12px 24px 12px; }
+    .be-done-inner > div:nth-child(3) {
+      width: calc(100% - 24px);
+      height: calc(20% - 24px);
+      margin: 0 12px 24px 12px; }
+    .be-done-inner > div:nth-child(4) {
+      width: calc(100% - 24px);
+      height: calc(20% - 24px);
+      margin: 0 12px 24px 12px; }
+    .be-done-inner > div:last-child {
+      width: calc(100% - 24px);
+      height: calc(20% - 24px);
+      margin: 0 12px 24px 12px; } }
+
+.or {
+  background: orange; }
+
+.ye {
+  background: lightyellow; }
+
+.gr {
+  background: lightgreen; }
+
+.bl {
+  background: skyblue; }
+
+.pr {
+  background: mediumpurple; }
 
 /*# sourceMappingURL=style.css.map */
