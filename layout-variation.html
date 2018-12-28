@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<title>Document</title>
+	<meta charset="UTF-8">
+	<style>
+		body {padding: 0;margin: 0;} 
+		article {
+			position:relative;
+			max-width:1440px; 
+			margin-bottom: 24px;	
+		}
+		/* base */
+		/* square-container level */
+		.square-block {
+			display:inline-block;
+			vertical-align:top;
+		}
+		.square-block.side {
+			position: relative;
+			width:35%; 
+			padding-top:56.25%;
+		}
+		.square-block.top {
+			top:0;
+		}
+		.square-block.bottom {
+			bottom:0;
+		}
+		.square-block.top,
+		.square-block.bottom {
+			position: absolute;
+			width:calc(65% - 24px);
+			height:calc(100%/2 - 24px/2);
+		}
+		/* square level */
+		.square {
+			display:inline-block;
+			vertical-align:top;
+			outline:1px solid lightsalmon;
+		}
+		.square.main {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background: brown;
+		}
+		.square.sub {
+			width:calc(50% - 24px/2);
+			height:100%;
+			background:steelblue;
+		}
+		.square.sub:first-child {
+			margin-right:24px;
+		}
+		/* inner contents level */
+		.square .imagebox,
+		.square .textbox {
+			height:100%;
+		}
+		/* variation */
+		/* left/right variation */
+		.flow-left {text-align:left}
+		.flow-right {text-align:right}
+		.flow-left .square-block.top,
+		.flow-left .square-block.bottom {
+			right:0;
+		}
+
+		.flow-right .square-block.top,
+		.flow-right .square-block.bottom {
+			left:0;
+		}
+		/* length variation */
+		.square.sub.length-short {
+			width:calc(100% - 70% - 24px/2);
+		}
+		.square.sub.length-medium {
+			width:calc(100% - 50% - 24px/2);
+		}
+		.square.sub.length-long {
+			width:calc(100% - 30% - 24px/2);
+		}
+	</style>
+</head>
+<body>
+	<article class="flow-left">
+		<div class="square-block side">
+			<div class="square main">
+				<div class="imagebox"></div>
+				<div class="textbox"></div>
+			</div>
+		</div><!--
+		--><div class="square-block top">			
+			<div class="square sub length-short">
+				<div class="imagebox"></div>
+				<div class="textbox"></div>
+			</div><!--
+			--><div class="square sub length-long">
+				<div class="imagebox"></div>
+				<div class="textbox"></div>
+			</div>
+		</div><!--
+		--><div class="square-block bottom">			
+			<div class="square sub length-medium">
+				<div class="imagebox"></div>
+				<div class="textbox"></div>
+			</div><!--
+			--><div class="square sub length-medium">
+				<div class="imagebox"></div>
+				<div class="textbox"></div>
+			</div>
+		</div>
+	</article>
+	<!-- 상하 반전 -->
+	<article class="flow-left">
+		<div class="square-block side">
+			<div class="square main">
+				<div class="imagebox"></div>
+				<div class="textbox"></div>
+			</div>
+		</div><!--
+		--><div class="square-block top">			
+			<div class="square sub length-medium">
+				<div class="imagebox"></div>
+				<div class="textbox"></div>
+			</div><!--
+			--><div class="square sub length-medium">
+				<div class="imagebox"></div>
+				<div class="textbox"></div>
+			</div>
+		</div><!--
+		--><div class="square-block bottom">			
+			<div class="square sub length-short">
+				<div class="imagebox"></div>
+				<div class="textbox"></div>
+			</div><!--
+			--><div class="square sub length-long">
+				<div class="imagebox"></div>
+				<div class="textbox"></div>
+			</div>
+		</div>
+	</article>
+	<!-- 좌우 반전 -->
+	<article class="flow-right">
+		<div class="square-block side">
+			<div class="square main">
+				<div class="imagebox"></div>
+				<div class="textbox"></div>
+			</div>
+		</div><!--
+		--><div class="square-block top">			
+			<div class="square sub length-medium">
+				<div class="imagebox"></div>
+				<div class="textbox"></div>
+			</div><!--
+			--><div class="square sub length-medium">
+				<div class="imagebox"></div>
+				<div class="textbox"></div>
+			</div>
+		</div><!--
+		--><div class="square-block bottom">			
+			<div class="square sub length-medium">
+				<div class="imagebox"></div>
+				<div class="textbox"></div>
+			</div><!--
+			--><div class="square sub length-medium">
+				<div class="imagebox"></div>
+				<div class="textbox"></div>
+			</div>
+		</div>
+	</article>
+</body>
+</html>
